@@ -19,9 +19,9 @@ def compute_number_neighbors(padded_frame, index_line, index_column):
                  [1, 0],
                  [1, 1]]
 
-    for _ in neighbors:
-        neighbors_line = index_line + neighbors[0]
-        neighbors_column = index_column + neighbors[1]
+    for neighbor in neighbors:
+        neighbors_line = index_line + neighbor[0]
+        neighbors_column = index_column + neighbor[1]
         if padded_frame[neighbors_line, neighbors_column] == 1:
             number_neighbors += 1
 
@@ -32,6 +32,9 @@ def compute_next_frame(frame):
 
     for line in range(1, padded_frame.shape[0] -1):
         for column in range(1, padded_frame.shape[1] -1):
+            number_neighbors = compute_number_neighbors(padded_frame, line, column)
+            print("Cell's state : " + padded_frame[line, column])
+            print("Number of neighbors : " + number_neighbors)
 
     return frame
 
