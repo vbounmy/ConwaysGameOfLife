@@ -1,20 +1,20 @@
 import numpy
 
-# frame = numpy.array([[0, 0, 0, 0, 0, 0, 0 ],
-#                      [0, 0, 0, 0, 0, 0, 0 ],
-#                      [0, 0, 0, 0, 0, 0, 0 ],
-#                      [0, 0, 1, 1, 1, 0, 0 ],
-#                      [0, 0, 0, 0, 0, 0, 0 ],
-#                      [0, 0, 0, 0, 0, 0, 0 ],
-#                      [0, 0, 0, 0, 0, 0, 0 ]])
+# frame = numpy.array([[0, 0, 0, 0, 0, 0, 0],
+#                      [0, 0, 0, 0, 0, 0, 0],
+#                      [0, 0, 0, 0, 0, 0, 0],
+#                      [0, 0, 1, 1, 1, 0, 0],
+#                      [0, 0, 0, 0, 0, 0, 0],
+#                      [0, 0, 0, 0, 0, 0, 0],
+#                      [0, 0, 0, 0, 0, 0, 0]])
 
-frame = numpy.array([[0, 0, 0, 0, 0, 0, 0 ],
-                     [0, 0, 0, 0, 0, 0, 0 ],
-                     [0, 0, 0, 1, 1, 0, 0 ],
-                     [0, 0, 1, 1, 0, 0, 0 ],
-                     [0, 0, 0, 1, 0, 0, 0 ],
-                     [0, 0, 0, 0, 0, 0, 0 ],
-                     [0, 0, 0, 0, 0, 0, 0 ]])
+frame = numpy.array([[0, 0, 0, 0, 0, 0, 0],
+                     [0, 0, 0, 0, 0, 0, 0],
+                     [0, 0, 0, 1, 1, 0, 0],
+                     [0, 0, 1, 1, 0, 0, 0],
+                     [0, 0, 0, 1, 0, 0, 0],
+                     [0, 0, 0, 0, 0, 0, 0],
+                     [0, 0, 0, 0, 0, 0, 0]])
 
 def compute_number_neighbors(padded_frame, index_line, index_column):
     number_neighbors = 0
@@ -53,7 +53,7 @@ def compute_next_frame(frame):
 
     return frame
 
-while True:
+while not numpy.array_equal(frame, numpy.zeros_like(frame)):
     print(frame)
     print("\n")
     frame = compute_next_frame(frame)
