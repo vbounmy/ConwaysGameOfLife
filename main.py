@@ -53,8 +53,7 @@ def compute_next_frame(frame):
 
     return frame
 
-# while True:
-for _ in range(10):
+while True:
     print(frame)
     print("\n")
     frame = compute_next_frame(frame)
