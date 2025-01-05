@@ -30,7 +30,8 @@ def compute_number_neighbors(padded_frame, index_line, index_column):
 def compute_next_frame(frame):
     padded_frame = numpy.pad(frame, 1, mode="constant")
 
-    for line in padded_frame[]
+    for line in range(1, padded_frame.shape[0] -1):
+        for column in range(1, padded_frame.shape[1] -1):
 
     return frame
 
